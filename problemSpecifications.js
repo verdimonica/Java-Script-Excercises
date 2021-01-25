@@ -1,3 +1,5 @@
+
+//TWO-FER
 /* Given a name, return a string with the message: 
   "One for name, one for me." 
 
@@ -20,3 +22,22 @@ function share(a, b) {
 
 share()
 
+
+//LEAP
+
+/* Given a year, report if it is leap year. 
+   A leap year occurs:
+   on every year that is evenly divisible by 4
+    except every year that is evenly divisible by 100
+    unless the year is also evenly divisible by 400 
+*/
+
+let year;
+
+function leapYear(year) {
+  if (year %4===0 && %400===0 && %100 !===0) {
+    console.log("Is a leap year")
+  }
+}
+
+leapYear(1900)
