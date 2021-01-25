@@ -32,12 +32,16 @@ share()
     unless the year is also evenly divisible by 400 
 */
 
-let year;
+let year = Number;
 
 function leapYear(year) {
-  if (year %4===0 && %400===0 && %100 !===0) {
+  if (year %4===0 
+      && year%400===0 
+      && year%100 !== 0
+      ) 
+      {
     console.log("Is a leap year")
   }
 }
 
-leapYear(1900)
+leapYear(190)
