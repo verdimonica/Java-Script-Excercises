@@ -7,9 +7,16 @@
 
 */
 
-let name = "Anna";
-let me = "me"
+let oneName = "Anna";
+let self = "me";
 
-function share(name, me){
-    console.log(`One for ${name} and one for ${me}`)
-}
+function share(a, b) {
+    if (!oneName) {
+      console.log(`One for you and one for ${self}`)
+    } else {
+      console.log(`One for ${oneName} and one for ${self}`)
+    }
+};
+
+share()
+
