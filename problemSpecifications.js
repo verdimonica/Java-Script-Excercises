@@ -9,10 +9,9 @@
 
 */
 
-let oneName = "Anna";
-let self = "me";
 
-function share(a, b) {
+
+function share(oneName, self) {
     if (!oneName) {
       console.log(`One for you and one for ${self}`)
     } else {
@@ -20,7 +19,7 @@ function share(a, b) {
     }
 };
 
-share()
+share("Anna", "me")
 
 
 //LEAP
@@ -32,7 +31,6 @@ share()
     unless the year is also evenly divisible by 400 
 */
 
-let year = Number;
 
 function leapYear(year) {
   if (year %4===0 
@@ -44,4 +42,4 @@ function leapYear(year) {
   }
 }
 
-leapYear(190)
+leapYear(1900)
