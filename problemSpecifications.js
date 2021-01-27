@@ -44,24 +44,30 @@ share("Anna", "me")
 */
 
 
-const leapYearCond1  = function(year) {
+const isDivisibleBy4  = function(year) {
   if(year %4 === 0) {
     return true
   }
 }; 
-const leapYearCond2 = function (year) {
-  if (year %400 === 0 && year %100 !==0){
+const isDivisibleBy400 = function(year) {
+  if (year %400 === 0){
+    return true
+  }
+};
+const isNotDivisibleBy100 = function(){
+  if (year %100 !==0) {
     return true
   }
 };
   
 function isLeapYear(year); {
-  if (leapYearCond1 && leapYearCond2 == true){
+  if (isDivisibleBy4 && isDivisibleBy400 && isNotDivisibleBy100 == true){
     console.log("Is leap yearr")
   }
   else{
     console.log("Is not leap year")
   }
-}
+};
+
 isLeapYear(1900)
 
