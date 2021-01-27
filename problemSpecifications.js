@@ -32,14 +32,28 @@ share("Anna", "me")
 */
 
 
-function leapYear(year) {
+/*function leapYear(year) {
   if (year %4===0 
-      && year%400===0 
-      && year%100 !== 0
-      ) 
+      && year %400===0 
+      && year %100 !== 0
+     ) 
       {
     console.log("Is a leap year")
   }
 }
+*/
 
-leapYear(1900)
+
+leapYearCond1 = (year %4 === 0); {return true}; 
+leapYearCond2 = (year %400 === 0 && year %100 !==0);{return true};
+  
+function isLeapYear(year); {
+  if (leapYearCond1 && leapYearCond2 == true){
+    console.log("Is leap yearr")
+  }
+  else{
+    console.log("Is not leap year")
+  }
+}
+isLeapYear(1900)
+
