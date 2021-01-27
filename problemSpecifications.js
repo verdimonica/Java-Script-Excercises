@@ -44,8 +44,16 @@ share("Anna", "me")
 */
 
 
-leapYearCond1 = (year %4 === 0); {return true}; 
-leapYearCond2 = (year %400 === 0 && year %100 !==0);{return true};
+const leapYearCond1  = function(year) {
+  if(year %4 === 0) {
+    return true
+  }
+}; 
+const leapYearCond2 = function (year) {
+  if (year %400 === 0 && year %100 !==0){
+    return true
+  }
+};
   
 function isLeapYear(year); {
   if (leapYearCond1 && leapYearCond2 == true){
