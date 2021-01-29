@@ -107,8 +107,12 @@ where N is any digit from 2 through 9
 and X is any digit from 0 through 9.*/
 
 function formatPhoneNums(codedPhoneNum) {
-  if (codePhoneNum.indexOf[1]= 1) {
-    phoneNumber = codedPhoneNum.silce(2,3,4,6,7,8,10,11,12,13)
+  if (codedPhoneNum.indexOf[1]= 1) {
+    phoneNumber = codedPhoneNum.substring(2,[3,4,6,7,8,10,11,12,],13)
   }
   return phoneNumber
 }
+
+formatPhoneNums("(120)-102-2836")
+
+console.log(phoneNumber)
