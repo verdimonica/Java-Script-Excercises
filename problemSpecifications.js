@@ -43,31 +43,32 @@ share("Anna", "me")
 }
 */
 
+function isLeapYear(year) {
+  const divisibleBy400 = isDivBy400(year);
 
-const isDivisibleBy4  = function(year) {
-  if(year %4 === 0) {
-    return true
-  }
-}; 
-const isDivisibleBy400 = function(year) {
-  if (year %400 === 0){
-    return true
-  }
-};
-const isNotDivisibleBy100 = function(){
-  if (year %100 !==0) {
-    return true
-  }
-};
-  
-function isLeapYear(year); {
-  if (isDivisibleBy4 && isDivisibleBy400 && isNotDivisibleBy100 == true){
-    console.log("Is leap yearr")
+  if (isDivBy4(year) && divisibleBy400 || isNotDivBy100(year)){
+    console.log("Is leap year")
   }
   else{
     console.log("Is not leap year")
   }
 };
+
+function isDivBy4 (number){
+  if (number % 4 === 0) {
+    return true
+  }else{
+    return false
+  }
+}
+
+function isDivBy400(number) {
+  return number % 400 === 0
+}
+
+function isNotDivBy100(number){
+  return number % 100 !== 0
+}
 
 isLeapYear(1900)
 
@@ -92,3 +93,22 @@ function raindrops(number) {
   }
   console.log(number)
 } 
+
+
+//PHONE NUMBERS
+
+/*Your task is to clean up 
+differently formatted telephone numbers 
+by removing punctuation and 
+the country code (1) if present.
+The format is usually represented as:
+(NXX)-NXX-XXXX
+where N is any digit from 2 through 9
+and X is any digit from 0 through 9.*/
+
+function formatPhoneNums(codedPhoneNum) {
+  if (codePhoneNum.indexOf[1]= 1) {
+    phoneNumber = codedPhoneNum.silce(2,3,4,6,7,8,10,11,12,13)
+  }
+  return phoneNumber
+}
