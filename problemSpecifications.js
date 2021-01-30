@@ -116,3 +116,38 @@ function formatPhoneNums(codedPhoneNum) {
 formatPhoneNums("(120)-102-2836")
 
 console.log(phoneNumber)
+
+
+
+//SPACE AGE
+
+function spaceAgeCalculator(seconds, planet) {
+  if (planet == "Mercury") {
+    orbitalPeriod = 0.2408267
+  }
+  else if (planet == "Venus") {
+    orbitalPeriod = 0.615119726
+  }
+  else if (planet == "Earth") {
+    orbitalPeriod = 1.0
+  }
+  else if (planet == "Mars") {
+    orbitalPeriod = 1.8808158 
+  } 
+  else if (planet == "Jupiter") {
+    orbitalPeriod = 11.862615  
+  }
+  else if (planet == "Saturn") {
+    orbitalPeriod =  29.447498
+  }
+  else if (planet == "Uranus") {
+    orbitalPeriod = 84.016846
+  }
+  else if (planet == "Neptune") {
+    orbitalPeriod = 164.79132
+  }
+  return age = seconds / orbitalPeriod
+}
+
+spaceAgeCalculator(1000000000)
+console.log( `You are ${age} Earth years old there!`)
