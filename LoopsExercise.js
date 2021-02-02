@@ -2,16 +2,17 @@
 let numbers = [3, 14, 2, 7, 6, 3, 7]
 
 // 1 - Display the length of the array
-    console.log(numbers.length);
+    const arrLength = numbers.length
+    console.log(arrLength);
 
 // 2 - Display the 3rd element in the array
     console.log(numbers[2])
 
 // 3 - Calculate the sum of the first and the last element (just 2 numbers)
-    function sum(numbers) {
+    function sum1(numbers) {
       return numbers[0] + numbers[6]
     }
-    console.log(sum)
+    console.log(sum1)
 
 // 4 - Display all the numbers
     console.log(numbers)
@@ -21,7 +22,17 @@ let numbers = [3, 14, 2, 7, 6, 3, 7]
         
     }
 // 6 - Calculate the sum of all numbers
+    console.log(numbers.reduce());
 
+    function getSum(a) {
+        total = 0;
+        for (let i = 0; i <= a.length; i++) {
+          total = total + i
+        }
+    return total
+ }
+
+    console.log(getSum(numbers));
 
 // 7 - Calculate the sum of the numbers at odd positions: 3, 2, 6, 7
 
