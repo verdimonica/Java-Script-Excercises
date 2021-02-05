@@ -15,19 +15,25 @@ let numbers = [3, 14, 2, 7, 6, 3, 7]
     console.log(sum1)
 
 // 4 - Display all the numbers
-    console.log(numbers)
+    function printNumbers(numbers) {
+        for (let index = 0; index <= numbers.length - 1; index++) {
+            console.log(numbers[index])
+        }
+    }
 // 5 - Display just the numbers at even positions: 14, 7, 3
-    for (let i = 0; i%2 === 0; i++) {
-        const evenPosition = numbers[i];
-        
+    f
+    for (let index = 0; index <= numbers.legth - 1; index++) {
+        if (index% 2 === 0) {
+            console.log(index)
+        }
     }
 // 6 - Calculate the sum of all numbers
     console.log(numbers.reduce());
 
-    function getSum(a) {
+    function getSum(numbers) {
         total = 0;
-        for (let i = 0; i <= a.length; i++) {
-          total = total + i
+        for (let index = 0; index <= numbers.length; index++) {
+          total = total + index
         }
     return total
  }
@@ -36,6 +42,20 @@ let numbers = [3, 14, 2, 7, 6, 3, 7]
 
 // 7 - Calculate the sum of the numbers at odd positions: 3, 2, 6, 7
 
+    function sumOdds(numbers) {
+        let total = 0;
+          for (let index = 0; index <= numbers.length - 1; index++) {
+              if (!isEven(numbers[index])) {
+                  total = total + numbers[index];    
+              }
+        }
+        return total
+    }
+      console.log(sumOdds(numbers))
+  
+  function isEven(number) {
+    return number % 2 === 0
+  }
 
 // 8 - Calculate the average of the numbers (total sum divided by number)
 
