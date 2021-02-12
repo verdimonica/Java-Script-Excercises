@@ -156,16 +156,13 @@ console.log( `You are ${age} Earth years old there!`)
 // The Hamming distance is only defined for sequences of equal length, 
 // So an attempt to calculate it between sequences of different lengths should not work.
 
-let dnaChain1 = "GAGCCTACTAACGGGAT"
-let dnaChain2 = "CATCGTAATGACGGCCT"
-
 let dnaChain1 = "GAGCCTACTACCGGGAT"
 let dnaChain2 = "CATCGTAATGACGGCCT"
 
 
 function findHammingDistance(dnaChain1, dnaChain2) {
   let hammingDistance = 0;
-  if (dnaChain1.length == dnaChain2.length) {
+  if (dnaChain1.length === dnaChain2.length) {
     console.log(dnaChain1.length)
     for (let i = 0; i < dnaChain1.length; i++) {
       if (dnaChain1[i] !== dnaChain2[i]){
@@ -173,8 +170,37 @@ function findHammingDistance(dnaChain1, dnaChain2) {
      }
     };
   }
-  console.log(hammingDistance)
+  return hammingDistance
 }
 
 findHammingDistance(dnaChain1, dnaChain2)
 
+/*RNA Transcription
+The four nucleotides found in RNA are adenine (A), cytosine (C), guanine (G) and uracil (U).
+Given a DNA strand, its transcribed RNA strand is formed by replacing each nucleotide with its complement:
+G -> C
+C -> G
+T -> A
+A -> U  */
+
+let dna = ["GAGCCTACTACCGGGAT"]
+function rnaTranscription(dna) {
+  let rna = ""
+  for (let i = 0; i< dna.length; i++) {
+  if (dna[i] === "G") {
+    rna[i] = "C"
+  }
+  if (dna[i] === "C") {
+    rna[i] = "G"
+  }
+  if (dna[i] === "T") {
+    rna[i] = "A"
+  }
+  if (dna[i] === "A"){
+    rna[i] == "U"
+  }
+     }
+  return rna
+}
+
+rnaTranscription(dna)
