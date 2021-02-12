@@ -59,12 +59,45 @@ let numbers = [3, 14, 2, 7, 6, 3, 7]
 
 // 8 - Calculate the average of the numbers (total sum divided by number)
 
+function average(numbers, number) {
+  let total = 0;
+    for (let index = 0; index <= numbers.length -1; index++) {
+        total = total + numbers[index];
+    }
+    let average = total / 2
+    return average 
+}
 
+  console.log(average(numbers, 2))
+  
 // 9 - Find the maximum number (hint: you'll need an `if` too)
+function maxNumber(numbers) {
+    let maxNumber = 0;
+    for (let index = 0; index <= numbers.length -1; index++) {
+        if(numbers[index] > maxNumber){
+            maxNumber = numbers[index]
+        }
+    }  
+    return maxNumber  
+}
 
+console.log(maxNumber(numbers))
 
 // 10 - Find the minimum number
 
+function thisNumberIsLessThanOtherNumber(thisNumber, otherNumber) {
+    return thisNumber < otherNumber
+}
+
+function minNumber(numbers) {
+    let minNumber = 0;
+    for (let index = 0; index <= numbers.length -1; index++) {
+        if(thisNumberIsLessThanOtherNumber(numbers[index], minNumber)){
+            minNumber = numbers[index]
+        }
+    }
+    return minNumber
+}
 
 // More difficult:
 

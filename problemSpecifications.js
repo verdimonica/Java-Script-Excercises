@@ -151,3 +151,30 @@ function spaceAgeCalculator(seconds, planet) {
 
 spaceAgeCalculator(1000000000)
 console.log( `You are ${age} Earth years old there!`)
+
+// Find the Hamming dinstance
+// The Hamming distance is only defined for sequences of equal length, 
+// So an attempt to calculate it between sequences of different lengths should not work.
+
+let dnaChain1 = "GAGCCTACTAACGGGAT"
+let dnaChain2 = "CATCGTAATGACGGCCT"
+
+let dnaChain1 = "GAGCCTACTACCGGGAT"
+let dnaChain2 = "CATCGTAATGACGGCCT"
+
+
+function findHammingDistance(dnaChain1, dnaChain2) {
+  let hammingDistance = 0;
+  if (dnaChain1.length == dnaChain2.length) {
+    console.log(dnaChain1.length)
+    for (let i = 0; i < dnaChain1.length; i++) {
+      if (dnaChain1[i] !== dnaChain2[i]){
+        hammingDistance = hammingDistance + 1
+     }
+    };
+  }
+  console.log(hammingDistance)
+}
+
+findHammingDistance(dnaChain1, dnaChain2)
+
